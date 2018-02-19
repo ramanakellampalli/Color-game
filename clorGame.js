@@ -38,15 +38,17 @@ hardBtn.addEventListener("click", function () {
     }
 });
 reset.addEventListener("click", function () {
+    messageDisplay.textContent = "";
     // generate new colors
     colors = generateRandomColors(numSquares);
     //pick new random color rom array
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
+    this.textContent = "New Colors";
     for (var i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
 });
 
 colorDisplay.textContent = pickedColor;
